@@ -1,9 +1,17 @@
 # Proiect_Maui_PDM
 ## Tema Proiect:
-### Omnifood - Your AI Chef
+Omnifood - Your AI Chef
 
-## Studenti:
+## Date despre autori
+
+### Program Master/An/Grupa
+Informatică Economică, An 1, Grupa 1115
+
+### Autori/Studenti:
 - VASILCANU Marius Daniel
 - PĂDUCEL Alexandru Gabriel
 - OANĂ Andreea Ramona
 - STAN Adrian Gabriel
+
+
+
