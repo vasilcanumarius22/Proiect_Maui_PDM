@@ -1,6 +1,6 @@
 # Proiect_Maui_PDM
 ## Tema Proiect:
-Omnifood - Your AI Chef
+__Omnifood - Your AI Chef__
 
 ## Date despre autori
 
