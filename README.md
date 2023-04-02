@@ -3,7 +3,7 @@
 ### Omnifood
 
 ## Studenti:
-VASILCANU Marius Daniel
-PĂDUCEL Alexandru Gabriel
-OANĂ Andreea Ramona
-STAN Adrian Gabriel
+- VASILCANU Marius Daniel
+- PĂDUCEL Alexandru Gabriel
+- OANĂ Andreea Ramona
+- STAN Adrian Gabriel
