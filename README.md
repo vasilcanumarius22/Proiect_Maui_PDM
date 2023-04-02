@@ -5,7 +5,7 @@ Omnifood - Your AI Chef
 ## Date despre autori
 
 ### Program Master/An/Grupa
-- Informatică Economica
+- Informatică Economică
 - An 1
 - Gr. 1115
 
