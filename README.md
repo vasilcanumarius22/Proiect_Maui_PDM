@@ -1,6 +1,6 @@
 # Proiect_Maui_PDM
 ## Tema Proiect:
-### Omnifood
+### Omnifood - Your AI Chef
 
 ## Studenti:
 - VASILCANU Marius Daniel
