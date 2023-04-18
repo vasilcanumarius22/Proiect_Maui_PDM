@@ -8,5 +8,7 @@ namespace MAUI_PROJECT_PDM.Models
 {
     public class Food
     {
+        public 
+       
     }
 }
