@@ -19,7 +19,7 @@
                         <Image Source="{Binding UrlImage}" MaximumWidthRequest="100" MaximumHeightRequest="100"/>
                         <Label Text="{Binding Title}"/>
                         <Label Text="{Binding Calories, StringFormat='Calorii: {0}'}"/>
-                        <Button Text="Add to eatten foods" Command="{Binding ButtonClickedCommand}" />
+                        <Button Text="Add to eatten foods" />
                     </VerticalStackLayout>
                 </ViewCell>
             </DataTemplate>
