@@ -15,11 +15,10 @@ namespace MAUI_PROJECT_PDM
             new Food("Avocado Salad","vegan", "descriere Avocado Salad",
                 400, "https://my-omnifood-project.netlify.app/img/meals/meal-2.jpg"),
             new Food("Garlic chicken breast","meat-based", "descriere Garlic chicken breast",
+                550, "https://images.immediate.co.uk/production/volatile/sites/30/2013/05/Garlic_chicken-3f62fd9.jpg"),
+            new Food("Sushi","fish-based", "descriere Sushi",
                 550, "https://images.immediate.co.uk/production/volatile/sites/30/2013/05/Garlic_chicken-3f62fd9.jpg")
     };
-            
 
-
-        
     }
 }
