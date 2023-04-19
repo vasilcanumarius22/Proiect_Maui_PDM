@@ -4,8 +4,12 @@
              x:Class="MAUI_PROJECT_PDM.Views.FoodDetail"
              Title="FoodDetail">
     <VerticalStackLayout>
+        <Button 
+            Text="Add"
+            Clicked="AddFoodToDb"    />
         <Label 
-            Text="Welcome to .NET MAUI!"
+            x:Name="labelTitle"
+            Text="Title"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
     </VerticalStackLayout>
