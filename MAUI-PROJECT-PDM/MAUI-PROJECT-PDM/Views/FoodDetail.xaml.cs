@@ -11,6 +11,7 @@ public partial class FoodDetail : ContentPage
 		this.food = food;
 
 		labelTitle.Text = food.Title;
+		// todo
 	}
 
     private void AddFoodToDb(object sender, EventArgs e)
