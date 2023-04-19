@@ -38,5 +38,15 @@ namespace MAUI_PROJECT_PDM.Models
             this.calories = calories;
             this.urlImage = urlImage;
         }
+
+        public string Title { get { return title; } set { title = value; } }
+        public string Type { get { return type; } set { type = value; } }
+        public string Description { get { return description; }
+            set
+            {
+                description = value;
+            } }
+        public float Calories { get {  return calories; } set {  calories = value; } }
+        public string UrlImage { get {  return urlImage; }  }
     }
 }
