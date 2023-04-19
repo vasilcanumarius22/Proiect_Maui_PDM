@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using SQLite;
 
 namespace MAUI_PROJECT_PDM.Models
@@ -48,5 +49,20 @@ namespace MAUI_PROJECT_PDM.Models
             } }
         public float Calories { get {  return calories; } set {  calories = value; } }
         public string UrlImage { get {  return urlImage; }  }
+
+
+
+        public ICommand ButtonClickedCommand
+        {
+            get
+            {
+                return new Command(ButtonClicked);
+            }
+        }
+
+        public void ButtonClicked()
+        {
+            Console.WriteLine(Title);
+        }
     }
 }
