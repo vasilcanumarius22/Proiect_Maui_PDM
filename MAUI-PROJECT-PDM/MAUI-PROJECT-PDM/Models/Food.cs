@@ -62,7 +62,7 @@ namespace MAUI_PROJECT_PDM.Models
 
         public void ButtonClicked()
         {
-            Console.WriteLine(Title);
+            // TODO: Aici o sa trimita la o pagina detail care o sa aiba nevoie de obiectul curent(this)
         }
     }
 }
