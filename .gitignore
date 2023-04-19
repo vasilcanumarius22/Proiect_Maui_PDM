@@ -1,2 +1,4 @@
 
 *.vsidx
+.vs
+MAUI-PROJECT-PDM/.vs
