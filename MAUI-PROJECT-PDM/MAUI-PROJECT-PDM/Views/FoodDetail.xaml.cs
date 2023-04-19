@@ -10,5 +10,6 @@ public partial class FoodDetail : ContentPage
 		InitializeComponent();
 		this.food = food;
 
+		// test for gitignore
 	}
 }
