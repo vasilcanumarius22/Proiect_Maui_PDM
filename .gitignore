@@ -2,3 +2,6 @@
 *.vsidx
 .vs
 MAUI-PROJECT-PDM/.vs
+*.vsidx
+*.editorconfig
+MAUI-PROJECT-PDM/.vs/MAUI-PROJECT-PDM/v17/.suo
