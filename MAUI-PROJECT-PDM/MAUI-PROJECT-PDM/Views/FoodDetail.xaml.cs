@@ -10,6 +10,11 @@ public partial class FoodDetail : ContentPage
 		InitializeComponent();
 		this.food = food;
 
-		// test for gitignore
+		labelTitle.Text = food.Title;
 	}
+
+    private void AddFoodToDb(object sender, EventArgs e)
+    {
+		Navigation.PopAsync();
+    }
 }
