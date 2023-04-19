@@ -1,4 +1,8 @@
-﻿namespace MAUI_PROJECT_PDM;
+﻿using MAUI_PROJECT_PDM.Models;
+using MAUI_PROJECT_PDM.Views;
+using System.Windows.Input;
+
+namespace MAUI_PROJECT_PDM;
 
 public partial class MainPage : ContentPage
 {
@@ -19,6 +23,13 @@ public partial class MainPage : ContentPage
     private void Toolbar_Buton2_Clicked(object sender, EventArgs e)
     {
         //Navigation.PushAsync(new Page());
+    }
+
+
+    public void OpenFoodDetail(object sender, EventArgs e)
+    {
+        //Handle the button click logic here
+        Navigation.PushAsync(new FoodDetail(listViewFoods.SelectedItem as Food));
     }
 
 }
