@@ -10,7 +10,9 @@
     </ContentPage.ToolbarItems>
 
     <ListView
-        x:Name="listViewFoods">
+        x:Name="listViewFoods"
+        ItemTapped="OpenFoodDetail">
+        
         <ListView.ItemTemplate >
             <DataTemplate>
                 <ViewCell>
@@ -19,7 +21,6 @@
                         <Image Source="{Binding UrlImage}" MaximumWidthRequest="100" MaximumHeightRequest="100"/>
                         <Label Text="{Binding Title}"/>
                         <Label Text="{Binding Calories, StringFormat='Calorii: {0}'}"/>
-                        <Button Text="Add to eatten foods" />
                     </VerticalStackLayout>
                 </ViewCell>
             </DataTemplate>
