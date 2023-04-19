@@ -55,17 +55,5 @@ namespace MAUI_PROJECT_PDM.Models
 
 
 
-        public ICommand ButtonClickedCommand
-        {
-            get
-            {
-                return new Command(ButtonClicked);
-            }
-        }
-
-        public void ButtonClicked()
-        {
-            // TODO: Aici o sa trimita la o pagina detail care o sa aiba nevoie de obiectul curent(this)
-        }
     }
 }
