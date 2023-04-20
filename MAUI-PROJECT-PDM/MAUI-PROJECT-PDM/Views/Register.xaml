@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI_PROJECT_PDM.Views.Register"
+             Title="Register">
+    <ScrollView>
+        <VerticalStackLayout HorizontalOptions="Center">
+            <Label Text="Register" FontSize="Large" />
+            <Entry x:Name="firstNameEntry" Placeholder="First Name" Margin="20" />
+            <Entry x:Name="lastNameEntry" Placeholder="Last Name" Margin="20" />
+            <Entry x:Name="emailEntry" Placeholder="Email" Margin="20" />
+            <StackLayout Orientation="Horizontal" Spacing="10"  Margin="20">
+                <Label Text="Birth Date" VerticalOptions="Center" />
+                <DatePicker x:Name="birthdatePicker" />
+            </StackLayout>
+            <Entry x:Name="passwordEntry" Placeholder="Password" Margin="20" IsPassword="True" />
+            <Entry x:Name="confirmPasswordEntry" Placeholder="Confirm Password" Margin="20" IsPassword="True" />
+            <Button Text="Register" Margin="20" Clicked="OnRegisterButtonClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

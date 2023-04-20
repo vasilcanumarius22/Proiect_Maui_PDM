@@ -5,8 +5,8 @@
              Title="LISTA MANCARURI DE ALES - PROVIZORIU">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Buton1" Clicked="Toolbar_Buton1_Clicked" Order="Secondary"/>
-        <ToolbarItem Text="Buton2" Clicked="Toolbar_Buton2_Clicked" Order="Secondary"/>
+        <ToolbarItem Text="Profile" Clicked="Toolbar_Profile_Clicked" Order="Secondary"/>
+        <ToolbarItem Text="Log Out" Clicked="Toolbar_LogOut_Clicked" Order="Secondary"/>
     </ContentPage.ToolbarItems>
 
     <ListView
