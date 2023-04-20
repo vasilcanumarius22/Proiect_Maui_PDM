@@ -1,4 +1,6 @@
-﻿namespace MAUI_PROJECT_PDM;
+﻿using MAUI_PROJECT_PDM.Views;
+
+namespace MAUI_PROJECT_PDM;
 
 public partial class App : Application
 {
@@ -6,6 +8,7 @@ public partial class App : Application
 	{
 		InitializeComponent();
 
-		MainPage = new AppShell();
-	}
+		MainPage = new NavigationPage(new Login());
+
+    }
 }

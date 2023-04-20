@@ -6,23 +6,25 @@ namespace MAUI_PROJECT_PDM;
 
 public partial class MainPage : ContentPage
 {
-	public MainPage()
+    private User user;
+	public MainPage(User userDB)
 	{
 		InitializeComponent();
+        user = userDB;
         listViewFoods.ItemsSource = MockFoods.foods;
 	}
     // TODO: De infrumusetat cum arata un element din lista
     // TODO: De citit elemente din JSON + de realizat json-ul
 
     // TODO: De adaugat restul paginilor
-    private void Toolbar_Buton1_Clicked(object sender, EventArgs e)
+    private void Toolbar_Profile_Clicked(object sender, EventArgs e)
     {
-        //Navigation.PushAsync(new Page());
+        Navigation.PushAsync(new ProfilePage(user));
     }
 
-    private void Toolbar_Buton2_Clicked(object sender, EventArgs e)
+    private void Toolbar_LogOut_Clicked(object sender, EventArgs e)
     {
-        //Navigation.PushAsync(new Page());
+        Navigation.PushAsync(new Login());
     }
 
 
