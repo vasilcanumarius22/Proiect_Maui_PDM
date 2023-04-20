@@ -30,7 +30,7 @@
 
         <StackLayout Orientation="Horizontal"  Margin="20, 0, 0, 20">
             <Label Text="Birth Date" VerticalOptions="Center" WidthRequest="120"/>
-            <DatePicker x:Name="birthdateProfile" Date="{Binding Birthdate}" IsEnabled="False" WidthRequest="120"/>
+            <DatePicker x:Name="birthdateProfile" Date="{Binding BirthDate}" IsEnabled="False" WidthRequest="120"/>
         </StackLayout>
 
         <StackLayout Orientation="Horizontal" Margin="20, 0, 0, 20">
