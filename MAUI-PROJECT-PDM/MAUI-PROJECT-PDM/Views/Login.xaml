@@ -6,9 +6,9 @@
              Title="Login">
     <VerticalStackLayout WidthRequest="600" HeightRequest="300" BackgroundColor="White" HorizontalOptions="Center" Spacing="5">
         <Label Text="Log In" FontSize="Title" HorizontalOptions="CenterAndExpand"/>
-        <Entry x:Name="emailLogIn" Placeholder="Email" WidthRequest="300"/>
-        <Entry x:Name="passwordLogIn"  Placeholder="Password" IsPassword="True" WidthRequest="300"/>
-        
+        <Entry x:Name="emailLogIn" Placeholder="Email" WidthRequest="300" TextColor="Black"/>
+        <Entry x:Name="passwordLogIn"  Placeholder="Password" IsPassword="True" WidthRequest="300" TextColor="Black"/>
+
         <Button x:Name="btnLogin" Text="Login" Clicked="LoginButtonClicked" HeightRequest="50" WidthRequest="300" />
         <Button x:Name="btnSignUp" Text="Or Sign Up" Clicked="SignUpButtonClicked" HeightRequest="50" WidthRequest="300" />
 
