@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI_PROJECT_PDM.Views.ContactForm"
+             Title="Contact">
+    <VerticalStackLayout>
+        <Label 
+            Text="Contact Us!" 
+            FontSize="Title" 
+            HorizontalOptions="CenterAndExpand" 
+            HorizontalTextAlignment="Center"/>
+
+        <!--Body Section - Actual Contact Form-->
+        <Label Text="First Name" 
+               FontSize="Header"
+               HorizontalOptions="CenterAndExpand"/>
+        <Entry x:Name="firstNameContact"
+               Placeholder="Enter your First Name"/>
+
+        <Label Text="Last Name" 
+               FontSize="Header"
+               HorizontalOptions="CenterAndExpand"/>
+        <Entry x:Name="lastNameContact"
+               Placeholder="Enter your Last Name"/>
+
+        <Label Text="Email" 
+               FontSize="Header"
+               HorizontalOptions="CenterAndExpand"/>
+        <Entry x:Name="emailContact"
+               Text="{Binding Email}" 
+               IsEnabled="False"/>
+
+        <Label Text="Message" 
+               FontSize="Header"
+               HorizontalOptions="CenterAndExpand"/>
+        <Editor x:Name="messageContact"
+               Placeholder="Type Your Message"/>
+
+        <!--Submit Contact form-->
+        <Button Text="Submit!" Clicked="OnSubmitButtonClicked" />
+
+    </VerticalStackLayout>
+</ContentPage>
