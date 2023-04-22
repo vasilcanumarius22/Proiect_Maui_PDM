@@ -30,10 +30,7 @@ public partial class MyFoods : ContentPage
 
         foods = await dao.GetAllByDateAndUser(datePicked, user);
 
-        listViewMyFoods.ItemsSource = null;
-
-
-        listViewMyFoods.ItemsSource = foods;
+        refreshPage();  
 
         return 0;
     }
@@ -59,10 +56,9 @@ public partial class MyFoods : ContentPage
 
             foods.Remove(foodToDelete);
 
-            listViewMyFoods.ItemsSource = null;
+            
+            refreshPage();
 
-
-            listViewMyFoods.ItemsSource = foods;
         }
         else
         {
@@ -75,5 +71,23 @@ public partial class MyFoods : ContentPage
         datePicked = DatePicker_Food.Date;
 
        await getFoods();
+    }
+
+    private void refreshPage()
+    {
+        listViewMyFoods.ItemsSource = null;
+
+
+        listViewMyFoods.ItemsSource = foods;
+
+
+
+        float totalSum = 0;
+        foreach (var item in foods)
+        {
+            totalSum += item.Calories;
+        }
+
+        label_total_calories.Text = "Total Calories: " + totalSum.ToString();
     }
 }
