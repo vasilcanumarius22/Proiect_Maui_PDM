@@ -8,6 +8,7 @@
         <Label Text="Log In" FontSize="Title" HorizontalOptions="CenterAndExpand"/>
         <Entry x:Name="emailLogIn" Placeholder="Email" WidthRequest="300" TextColor="Black"/>
         <Entry x:Name="passwordLogIn"  Placeholder="Password" IsPassword="True" WidthRequest="300" TextColor="Black"/>
+        <!--git refresh-->
 
         <Button x:Name="btnLogin" Text="Login" Clicked="LoginButtonClicked" HeightRequest="50" WidthRequest="300" />
         <Button x:Name="btnSignUp" Text="Or Sign Up" Clicked="SignUpButtonClicked" HeightRequest="50" WidthRequest="300" />
