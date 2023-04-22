@@ -40,9 +40,9 @@ public partial class ContactForm : ContentPage
 
         // Creates a new MimeMessage and sets its properties.
         var message = new MimeMessage();
-        message.From.Add(new MailboxAddress($"{firstName} {lastName}", email));
+        message.From.Add(new MailboxAddress($"{contact.FirstName} {contact.LastName}", contact.Email));
         message.To.Add(new MailboxAddress("marvdan753", "marvdan753@gmail.com"));
-        message.Subject = $"Contact form: {firstName} {lastName}";
+        message.Subject = $"Contact form: {contact.FirstName} {contact.LastName}";
 
         message.Body = new TextPart("plain")
         {
