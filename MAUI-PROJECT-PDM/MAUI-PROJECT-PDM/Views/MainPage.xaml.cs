@@ -44,8 +44,13 @@ public partial class MainPage : ContentPage
 
     public void OpenFoodDetail(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new FoodDetail(listViewFoods.SelectedItem as Food));
+        Navigation.PushAsync(new FoodDetail(listViewFoods.SelectedItem as Food, user));
     }
 
+    private async void ToolbarItem_MyFoods_Clicked(object sender, EventArgs e)
+    {
+
+        await Navigation.PushAsync(new MyFoods(user));
+    }
 }
 

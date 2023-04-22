@@ -16,15 +16,8 @@ namespace MAUI_PROJECT_PDM.Models
         [JsonIgnore]
         public int Id { get; set; }
 
-        public Food(string title, string type, string description, float calories, string urlImage)
-        {
-            Title = title;
-            Type = type;
-            Description = description;
-            Calories = calories;
-            UrlImage = urlImage;
-        }
-
+        [JsonIgnore]
+        public string UserEmail { get; set; }
 
         [JsonPropertyName("title")]
         public string Title { get; set; }
@@ -41,7 +34,8 @@ namespace MAUI_PROJECT_PDM.Models
         [JsonPropertyName("urlImage")]
         public string UrlImage { get; set; }
 
-
+        [JsonIgnore]
+        public DateTime Date { get; set; }
 
     }
 }
