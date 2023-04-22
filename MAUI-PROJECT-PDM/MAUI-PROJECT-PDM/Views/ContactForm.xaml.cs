@@ -54,7 +54,7 @@ public partial class ContactForm : ContentPage
             await client.SendAsync(message);
             await client.DisconnectAsync(true);
 
-            await DisplayAlert("Success", "Your message is sent and will be viewed by one of staff", "OK");
+            await DisplayAlert("Success", "Your message is submited and will be reviewed by our staff soon", "OK");
         }
         catch (Exception ex)
         {
