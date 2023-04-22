@@ -9,7 +9,12 @@
 
             <VerticalStackLayout HorizontalOptions="Center">
 
-            <DatePicker DateSelected="DatePicker_Food_DateSelected" x:Name="DatePicker_Food"/>
+            <HorizontalStackLayout Padding="2" HorizontalOptions="CenterAndExpand">
+                <DatePicker DateSelected="DatePicker_Food_DateSelected" x:Name="DatePicker_Food"/>
+
+                <Label x:Name="label_total_calories" Text="0" Margin="10"/>
+
+            </HorizontalStackLayout>
 
 
 
