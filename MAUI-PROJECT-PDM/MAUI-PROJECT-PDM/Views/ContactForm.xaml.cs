@@ -5,10 +5,13 @@ using MailKit.Net.Smtp;
 using MimeKit;
 using Microsoft.Maui.Controls;
 
+// ContactForm class ->  represents a form for submitting contact messages.
 public partial class ContactForm : ContentPage
 {
+    // private User object -> represents the user submitting the contact message.
     private User _user;
 
+    // The constructor for the ContactForm -> initializes the component and sets the user email.
     public ContactForm(User user)
     {
         InitializeComponent();
@@ -16,15 +19,16 @@ public partial class ContactForm : ContentPage
         emailContact.Text = _user.Email;
     }
 
+    // Event handler for the submit button click event.
     private async void OnSubmitButtonClicked(object sender, EventArgs e)
     {
-        // Retrieve the values entered by the user
+        // Retrieves the values entered by the user and stores them in local variables.
         var firstName = firstNameContact.Text;
         var lastName = lastNameContact.Text;
         var email = _user.Email;
         var messageText = messageContact.Text;
 
-        // Contact Object
+        // Creates a Contact object with the entered data.
         var contact = new Contact
         {
             FirstName = firstName,
@@ -34,7 +38,7 @@ public partial class ContactForm : ContentPage
 
         };
 
-        // IT DOESN'T WORK YET
+        // Creates a new MimeMessage and sets its properties.
         var message = new MimeMessage();
         message.From.Add(new MailboxAddress($"{firstName} {lastName}", email));
         message.To.Add(new MailboxAddress("marvdan753", "marvdan753@gmail.com"));
@@ -42,22 +46,26 @@ public partial class ContactForm : ContentPage
 
         message.Body = new TextPart("plain")
         {
-            Text = $"First Name: {firstName}\nLast Name: {lastName}\nEmail: {email}\n\nMessage:\n{messageText}"
+            Text = $"First Name: {contact.FirstName}\nLast Name: {contact.LastName}\nEmail: {contact.Email}\n\nMessage:\n{contact.Message}"
         };
 
+        // Creates a new SmtpClient object to send the email.
         using var client = new SmtpClient();
 
         try
         {
+            // Connects to the SMTP server, authenticates, sends the email, and disconnects.
             await client.ConnectAsync("smtp.gmail.com", 587, MailKit.Security.SecureSocketOptions.StartTls);
             await client.AuthenticateAsync("marvdan753@gmail.com", "rzpcvukfskevaogh");
             await client.SendAsync(message);
             await client.DisconnectAsync(true);
 
+            // Displays a success alert to the user.
             await DisplayAlert("Success", "Your message is submited and will be reviewed by our staff soon", "OK");
         }
         catch (Exception ex)
         {
+            // Displays an error alert if an exception occurs.
             await DisplayAlert("Error", $"Failed to send message: {ex.Message}", "OK");
         }
 
@@ -65,6 +73,7 @@ public partial class ContactForm : ContentPage
     }
 }
 
+// Contact class -> represents a submitted contact message, with properties for first name, last name, email, and message.
 public class Contact
 {
     public string FirstName { get; set; }
