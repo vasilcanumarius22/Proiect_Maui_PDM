@@ -1,5 +1,6 @@
 using MAUI_PROJECT_PDM.Models;
 
+
 namespace MAUI_PROJECT_PDM.Views;
 
 public partial class Login : ContentPage
@@ -8,6 +9,8 @@ public partial class Login : ContentPage
     {
         InitializeComponent();
     }
+
+    // Marius TODO - Add Enter key event listener for login
 
     private async void LoginButtonClicked(object sender, EventArgs e)
     {
