@@ -7,6 +7,8 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Profile" Clicked="Toolbar_Profile_Clicked" Order="Secondary"/>
         <ToolbarItem Text="My Foods" Clicked="ToolbarItem_MyFoods_Clicked" Order="Secondary"/>
+        <ToolbarItem Text="Contact" Clicked="Toolbar_Contact_Clicked" Order="Secondary"/>
+        <ToolbarItem Text="About Us" Clicked="ToolbarItem_AboutUs_Clicked" Order="Secondary"/>
         <ToolbarItem Text="Log Out" Clicked="Toolbar_LogOut_Clicked" Order="Secondary"/>
     </ContentPage.ToolbarItems>
 

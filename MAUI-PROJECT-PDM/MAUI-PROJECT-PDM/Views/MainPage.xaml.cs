@@ -52,5 +52,15 @@ public partial class MainPage : ContentPage
 
         await Navigation.PushAsync(new MyFoods(user));
     }
+
+    private async void Toolbar_Contact_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new ContactForm(user));
+    }
+
+    private async void ToolbarItem_AboutUs_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new AboutUs());
+    }
 }
 
