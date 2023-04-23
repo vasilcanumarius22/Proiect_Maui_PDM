@@ -33,7 +33,7 @@ public partial class Register : ContentPage
         if (!emailEntry.Text.Contains("@"))
         {
             await DisplayAlert("Error", "Invalid Email", "OK");
-            return;
+            return; 
         }
 
         if (!regex.IsMatch(passwordEntry.Text) && passwordEntry.Text.Length<8)
