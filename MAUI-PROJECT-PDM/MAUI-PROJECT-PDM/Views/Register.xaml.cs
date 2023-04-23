@@ -80,4 +80,9 @@ public partial class Register : ContentPage
             ((Button)sender).Text = "Hide";
         }
     }
+
+    private void register_Completed(object sender, EventArgs e)
+    {
+        OnRegisterButtonClicked(sender, e);
+    }
 }
