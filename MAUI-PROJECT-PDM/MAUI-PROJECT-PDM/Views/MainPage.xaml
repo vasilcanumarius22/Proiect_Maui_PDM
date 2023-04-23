@@ -4,8 +4,9 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="MAUI_PROJECT_PDM.MainPage"
-    Title="LISTA MANCARURI DE ALES - PROVIZORIU"
-    NavigationPage.HasBackButton="False">
+    Title="Choose Your Food"
+    NavigationPage.HasBackButton="False"
+    BackgroundColor="#EEE">
 
 
     <ContentPage.ToolbarItems>
@@ -38,20 +39,50 @@
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
-                    <VerticalStackLayout
-                        Padding="8">
-                        <Image
-                            Source="{Binding UrlImage}"
-                            MaximumWidthRequest="100"
-                            MaximumHeightRequest="100" />
-                        <Label
-                            Text="{Binding Title}" />
-                        <Label
-                            Text="{Binding Calories, StringFormat='Calorii: {0}'}" />
-                    </VerticalStackLayout>
+                    <Frame
+                        CornerRadius="10"
+                        BackgroundColor="White"
+                        WidthRequest="400"
+                        HeightRequest="370"
+                        Margin="0, 10, 0, 10">
+                        <VerticalStackLayout
+                            Padding="8"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center">
+                            <Image
+                                Source="{Binding UrlImage}"
+                                MaximumWidthRequest="200"
+                                MaximumHeightRequest="200" 
+                                Margin="0, 10, 0, 20"/>
+                            <Label
+                                Text="{Binding Title}"
+                                HorizontalTextAlignment="Center"
+                                VerticalTextAlignment="Center" 
+                                TextColor="Black"
+                                FontSize="Medium" 
+                                Padding="0, 0, 10, 0"/>
+                            <Label
+                                HorizontalTextAlignment="Center"
+                                VerticalTextAlignment="Center"
+                                TextColor="Black"
+                                FontSize="Small">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span
+                                            Text="Calorii: " />
+                                        <Span
+                                            Text="{Binding Calories}"
+                                            FontAttributes="Bold" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </VerticalStackLayout>
+                    </Frame>
                 </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
+
+    
 
 </ContentPage>
