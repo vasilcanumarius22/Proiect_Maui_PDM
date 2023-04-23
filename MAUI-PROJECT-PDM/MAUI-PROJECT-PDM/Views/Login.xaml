@@ -1,17 +1,72 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MAUI_PROJECT_PDM.Views.Login"
-             BackgroundColor="AliceBlue"
-             Title="Login">
-    <VerticalStackLayout WidthRequest="600" HeightRequest="300" BackgroundColor="White" HorizontalOptions="Center" Spacing="5">
-        <Label Text="Log In" FontSize="Title" HorizontalOptions="CenterAndExpand"/>
-        <Entry x:Name="emailLogIn" Placeholder="Email" WidthRequest="300" TextColor="Black"/>
-        <Entry x:Name="passwordLogIn"  Placeholder="Password" IsPassword="True" WidthRequest="300" TextColor="Black"/>
-        <!--git refresh-->
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MAUI_PROJECT_PDM.Views.Login"
+    BackgroundColor="#EEE"
+    Title="Login">
 
-        <Button x:Name="btnLogin" Text="Login" Clicked="LoginButtonClicked" HeightRequest="50" WidthRequest="300" />
-        <Button x:Name="btnSignUp" Text="Or Sign Up" Clicked="SignUpButtonClicked" HeightRequest="50" WidthRequest="300" />
+    <Frame
+        BackgroundColor="#FDF2E9"
+        Padding="20"
+        WidthRequest="600"
+        HeightRequest="350"
+        BorderColor="#fdf2e9"
+        CornerRadius="10">
+        <FlexLayout
+            Direction="Column"
+            AlignItems="Center"
+            JustifyContent="SpaceBetween">
+            <Image
+                Source="omnifood_logo.png"
+                HeightRequest="70"
+                WidthRequest="300" />
 
-    </VerticalStackLayout>
+            <Label
+                Text="Log In"
+                FontSize="Title"
+                TextColor="#000"
+                HorizontalOptions="CenterAndExpand" />
+
+            <Entry
+                x:Name="emailLogIn"
+                Placeholder="Email"
+                WidthRequest="300"
+                TextColor="Black"
+                BackgroundColor="#FFF"
+                Completed="login_Completed" />
+            <Entry
+                x:Name="passwordLogIn"
+                Placeholder="Password"
+                IsPassword="True"
+                WidthRequest="300"
+                TextColor="Black"
+                BackgroundColor="#FFF" 
+                Completed="login_Completed"/>
+
+            <HorizontalStackLayout
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand"
+                Spacing="10">
+                <Button
+                    x:Name="btnLogin"
+                    Text="Login"
+                    Clicked="LoginButtonClicked"
+                    HeightRequest="50"
+                    WidthRequest="250"
+                    TextColor="#FFF"
+                    FontSize="20"
+                    BackgroundColor="#E67E22" />
+                <Button
+                    x:Name="btnSignUp"
+                    Text="Or Sign Up!"
+                    Clicked="SignUpButtonClicked"
+                    HeightRequest="50"
+                    WidthRequest="250"
+                    TextColor="#555"
+                    FontSize="20"
+                    BackgroundColor="#FFF" />
+            </HorizontalStackLayout>
+        </FlexLayout>
+    </Frame>
 </ContentPage>

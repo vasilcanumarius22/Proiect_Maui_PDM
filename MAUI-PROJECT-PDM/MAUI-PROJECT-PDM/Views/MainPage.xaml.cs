@@ -14,7 +14,6 @@ public partial class MainPage : ContentPage
 	{
 		InitializeComponent();
         user = userDB;
-
         getFoods();
 
 
