@@ -1,21 +1,88 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MAUI_PROJECT_PDM.Views.Register"
-             Title="Register">
-    <ScrollView>
-        <VerticalStackLayout HorizontalOptions="Center">
-            <Label Text="Register" FontSize="Large" />
-            <Entry x:Name="firstNameEntry" Placeholder="First Name" Margin="20" />
-            <Entry x:Name="lastNameEntry" Placeholder="Last Name" Margin="20" />
-            <Entry x:Name="emailEntry" Placeholder="Email" Margin="20" />
-            <StackLayout Orientation="Horizontal" Spacing="10"  Margin="20">
-                <Label Text="Birth Date" VerticalOptions="Center" />
-                <DatePicker x:Name="birthdatePicker" />
-            </StackLayout>
-            <Entry x:Name="passwordEntry" Placeholder="Password" Margin="20" IsPassword="True" />
-            <Entry x:Name="confirmPasswordEntry" Placeholder="Confirm Password" Margin="20" IsPassword="True" />
-            <Button Text="Register" Margin="20" Clicked="OnRegisterButtonClicked" />
-        </VerticalStackLayout>
-    </ScrollView>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MAUI_PROJECT_PDM.Views.Register"
+    BackgroundColor="#EEE"
+    Title="Register">
+    <Frame
+        BackgroundColor="#FDF2E9"
+        Padding="20"
+        WidthRequest="600"
+        HeightRequest="700"
+        BorderColor="#fdf2e9"
+        CornerRadius="10">
+        <ScrollView>
+            <VerticalStackLayout
+                HorizontalOptions="Center"
+                WidthRequest="350">
+                <Label
+                    Text="Register"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    TextColor="Black" />
+                <Entry
+                    x:Name="firstNameEntry"
+                    Placeholder="First Name"
+                    Margin="20, 20, 20, 10"
+                    TextColor="Black"
+                    BackgroundColor="#FFF" />
+                <Entry
+                    x:Name="lastNameEntry"
+                    Placeholder="Last Name"
+                    Margin="20, 20, 20, 10"
+                    TextColor="Black"
+                    BackgroundColor="#FFF" />
+                <Entry
+                    x:Name="emailEntry"
+                    Placeholder="Email"
+                    Margin="20, 20, 20, 10"
+                    TextColor="Black"
+                    BackgroundColor="#FFF" />
+                <StackLayout
+                    Orientation="Horizontal"
+                    HorizontalOptions="CenterAndExpand"
+                    Spacing="10"
+                    Margin="20, 20, 20, 5">
+                    <Label
+                        Text="Birth Date"
+                        VerticalOptions="Center"
+                        TextColor="Black" />
+                    <DatePicker
+                        x:Name="birthdatePicker"
+                        TextColor="Black" />
+                </StackLayout>
+
+                <Entry
+                    x:Name="passwordEntry"
+                    Placeholder="Password"
+                    Margin="20, 20, 20, 0"
+                    IsPassword="True"
+                    TextColor="Black"
+                    BackgroundColor="#FFF" />
+
+                <Entry
+                    x:Name="confirmPasswordEntry"
+                    Placeholder="Confirm Password"
+                    Margin="20"
+                    IsPassword="True"
+                    TextColor="Black"
+                    BackgroundColor="#FFF" />
+                <Button
+                    Text="Show Password"
+                    TextColor="Black"
+                    Margin="20, 0, 20, 20" 
+                    Clicked="Button_ShowPass_Clicked"/>
+                <Button
+                    Text="Register"
+                    Margin="20"
+                    Clicked="OnRegisterButtonClicked"
+                    TextColor="#FFF"
+                    FontSize="20"
+                    BackgroundColor="#E67E22" />
+            </VerticalStackLayout>
+        </ScrollView>
+    </Frame>
+
+
 </ContentPage>

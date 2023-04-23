@@ -5,20 +5,20 @@ namespace MAUI_PROJECT_PDM.Views;
 
 public partial class Register : ContentPage
 {
-    private Regex regex; 
+    private Regex regex;
     public Register()
-	{
-		InitializeComponent();
+    {
+        InitializeComponent();
         regex = new Regex("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$");
     }
 
     private async void OnRegisterButtonClicked(object sender, EventArgs e)
     {
 
-        if (string.IsNullOrEmpty(firstNameEntry.Text) 
-            || string.IsNullOrEmpty(lastNameEntry.Text) 
-            || string.IsNullOrEmpty(emailEntry.Text) 
-            || string.IsNullOrEmpty(passwordEntry.Text) 
+        if (string.IsNullOrEmpty(firstNameEntry.Text)
+            || string.IsNullOrEmpty(lastNameEntry.Text)
+            || string.IsNullOrEmpty(emailEntry.Text)
+            || string.IsNullOrEmpty(passwordEntry.Text)
             || string.IsNullOrEmpty(confirmPasswordEntry.Text))
         {
             await DisplayAlert("Error", "Please fill all fields.", "OK");
@@ -36,7 +36,7 @@ public partial class Register : ContentPage
             return; 
         }
 
-        if (!regex.IsMatch(passwordEntry.Text) && passwordEntry.Text.Length<8)
+        if (!regex.IsMatch(passwordEntry.Text) && passwordEntry.Text.Length < 8)
         {
             await DisplayAlert("Error", "password should have at least 8 characters, one capital letter and one number", "OK");
             return;
@@ -63,6 +63,21 @@ public partial class Register : ContentPage
         else
         {
             await DisplayAlert("Error", "Registration failed.", "OK");
+        }
+    }
+
+    private void Button_ShowPass_Clicked(object sender, EventArgs e)
+    {
+        passwordEntry.IsPassword = !passwordEntry.IsPassword;
+        confirmPasswordEntry.IsPassword =!confirmPasswordEntry.IsPassword;
+
+        if (passwordEntry.IsPassword && confirmPasswordEntry.IsPassword)
+        {
+            ((Button)sender).Text = "Show";
+        }
+        else
+        {
+            ((Button)sender).Text = "Hide";
         }
     }
 }

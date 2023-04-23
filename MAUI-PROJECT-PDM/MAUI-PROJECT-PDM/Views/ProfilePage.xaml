@@ -1,45 +1,106 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MAUI_PROJECT_PDM.Views.ProfilePage"
-             Title="ProfilePage">
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MAUI_PROJECT_PDM.Views.ProfilePage"
+    Title="ProfilePage">
     <ScrollView>
-        <VerticalStackLayout HorizontalOptions="Center">
-        <Label Text="Profile" FontSize="Title" HorizontalOptions="CenterAndExpand"/>
-        
-        <Image Source="profile_icon.png"
-         HeightRequest="128"
-         HorizontalOptions="CenterAndExpand" 
-         VerticalOptions="Center"
-         Margin="0, 0, 0, 20"/>
+        <VerticalStackLayout
+            HorizontalOptions="Center">
+            <Label
+                Text="Profile"
+                FontSize="Title"
+                HorizontalOptions="CenterAndExpand" />
 
-        <StackLayout Orientation="Horizontal"  Margin="20, 0, 0, 20">
-            <Label Text="First Name" VerticalOptions="Center" WidthRequest="120"/>
-            <Entry x:Name="firstNameProfile" Text="{Binding FirstName}" Placeholder="First Name" IsEnabled="False" WidthRequest="120"/>
-        </StackLayout>
+            <Image
+                Source="profile_icon.png"
+                HeightRequest="128"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="Center"
+                Margin="0, 0, 0, 20" />
 
-        <StackLayout Orientation="Horizontal"  Margin="20, 0, 0, 20">
-            <Label Text="Last Name" VerticalOptions="Center" WidthRequest="120"/>
-            <Entry x:Name="lastNameProfile" Text="{Binding LastName}" Placeholder="Last Name" IsEnabled="False" WidthRequest="120"/>
-        </StackLayout>
+            <StackLayout
+                Orientation="Horizontal"
+                Margin="20, 0, 0, 20">
+                <Label
+                    Text="First Name"
+                    VerticalOptions="Center"
+                    WidthRequest="120" />
+                <Entry
+                    x:Name="firstNameProfile"
+                    Text="{Binding FirstName}"
+                    Placeholder="First Name"
+                    IsEnabled="False"
+                    WidthRequest="120" />
+            </StackLayout>
 
-        <StackLayout Orientation="Horizontal"  Margin="20, 0, 0, 20">
-            <Label Text="Email" VerticalOptions="Center" WidthRequest="120"/>
-            <Entry x:Name="emailUserProfile" Text="{Binding Email}" Placeholder="Email" IsEnabled="False" WidthRequest="120"/>
-        </StackLayout>
+            <StackLayout
+                Orientation="Horizontal"
+                Margin="20, 0, 0, 20">
+                <Label
+                    Text="Last Name"
+                    VerticalOptions="Center"
+                    WidthRequest="120" />
+                <Entry
+                    x:Name="lastNameProfile"
+                    Text="{Binding LastName}"
+                    Placeholder="Last Name"
+                    IsEnabled="False"
+                    WidthRequest="120" />
+            </StackLayout>
 
-        <StackLayout Orientation="Horizontal"  Margin="20, 0, 0, 20">
-            <Label Text="Birth Date" VerticalOptions="Center" WidthRequest="120"/>
-            <DatePicker x:Name="birthdateProfile" Date="{Binding BirthDate}" IsEnabled="False" WidthRequest="120"/>
-        </StackLayout>
+            <StackLayout
+                Orientation="Horizontal"
+                Margin="20, 0, 0, 20">
+                <Label
+                    Text="Email"
+                    VerticalOptions="Center"
+                    WidthRequest="120" />
+                <Entry
+                    x:Name="emailUserProfile"
+                    Text="{Binding Email}"
+                    Placeholder="Email"
+                    IsEnabled="False"
+                    WidthRequest="120" />
+            </StackLayout>
 
-        <StackLayout Orientation="Horizontal" Margin="20, 0, 0, 20">
-            <Label Text="Password" VerticalOptions="Center" WidthRequest="120"/>
-            <Entry x:Name="passwordEntryProfile" Text="{Binding Password}" Placeholder="Password" IsPassword="True" IsEnabled="False" WidthRequest="120"/>
-        </StackLayout>
+            <StackLayout
+                Orientation="Horizontal"
+                Margin="20, 0, 0, 20">
+                <Label
+                    Text="Birth Date"
+                    VerticalOptions="Center"
+                    WidthRequest="120" />
+                <DatePicker
+                    x:Name="birthdateProfile"
+                    Date="{Binding BirthDate}"
+                    IsEnabled="False"
+                    WidthRequest="120" />
+            </StackLayout>
 
-        <Button x:Name="buttonProfitEdit" Text="Edit" Clicked="OnEditButtonClicked" HeightRequest="50" WidthRequest="150" />
+            <StackLayout
+                Orientation="Horizontal"
+                Margin="20, 0, 0, 20">
+                <Label
+                    Text="Password"
+                    VerticalOptions="Center"
+                    WidthRequest="120" />
+                <Entry
+                    x:Name="passwordEntryProfile"
+                    Text="{Binding Password}"
+                    Placeholder="Password"
+                    IsPassword="True"
+                    IsEnabled="False"
+                    WidthRequest="120" />
+            </StackLayout>
 
-    </VerticalStackLayout>
+            <Button
+                x:Name="buttonProfitEdit"
+                Text="Edit"
+                Clicked="OnEditButtonClicked"
+                HeightRequest="50"
+                WidthRequest="150" />
+
+        </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

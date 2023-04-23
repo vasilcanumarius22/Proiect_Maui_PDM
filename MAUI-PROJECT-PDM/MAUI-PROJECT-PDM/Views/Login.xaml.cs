@@ -45,4 +45,9 @@ public partial class Login : ContentPage
     {
         await Navigation.PushAsync(new Register());
     }
+
+    private void login_Completed(object sender, EventArgs e)
+    {
+        LoginButtonClicked(sender, e);
+    }
 }
