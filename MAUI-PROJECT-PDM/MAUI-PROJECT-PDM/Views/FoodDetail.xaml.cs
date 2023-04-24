@@ -4,17 +4,25 @@ namespace MAUI_PROJECT_PDM.Views;
 
 public partial class FoodDetail : ContentPage
 {
-	Food food;
+    Food food;
     User user;
-	public FoodDetail(Food food, User user)
-	{
-		InitializeComponent();
-		this.food = food;
+    public FoodDetail(Food food, User user)
+    {
+        InitializeComponent();
+        this.food = food;
         this.user = user;
 
-		labelTitle.Text = food.Title;
-		// todo page contents
-	}
+        labelTitle.Text = food.Title;
+        labelCalories.Text = food.Calories.ToString();
+        labelCarbohydrates.Text = food.Carbohydrates.ToString();
+        labelFibers.Text = food.Fibers.ToString();
+        labelSugars.Text = food.Sugars.ToString();
+        labelProteins.Text = food.Proteins.ToString();
+        labelFat.Text = food.Fat.ToString();
+        labelSaturatedFat.Text = food.SaturatedFat.ToString();
+        labelSodium.Text = food.Sodium.ToString();
+        // todo page contents
+    }
 
     private async void AddFoodToDb(object sender, EventArgs e)
     {
@@ -32,6 +40,6 @@ public partial class FoodDetail : ContentPage
             await DisplayAlert("Error", "Error adding the food.. try again.", "OK");
         }
 
-        
+
     }
 }
