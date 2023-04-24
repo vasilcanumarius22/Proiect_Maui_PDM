@@ -5,14 +5,230 @@
     x:Class="MAUI_PROJECT_PDM.Views.FoodDetail"
     BackgroundColor="#EEE"
     Title="FoodDetail">
-    <VerticalStackLayout>
+    <!--<VerticalStackLayout>
         <Button
             Text="Add"
             Clicked="AddFoodToDb" />
+
+
         <Label
             x:Name="labelTitle"
             Text="Title"
             VerticalOptions="Center"
             HorizontalOptions="Center" />
+        <Label
+            Text="Carbs value"
+            VerticalOptions="Center"
+            HorizontalOptions="Center" />
+        <Label
+            Text="Fibers value"
+            VerticalOptions="Center"
+            HorizontalOptions="Center" />
+        <Label
+            Text="Sugars value"
+            VerticalOptions="Center"
+            HorizontalOptions="Center" />
+        <Label
+            Text="Proteins value"
+            VerticalOptions="Center"
+            HorizontalOptions="Center" />
+        <Label
+            Text="Fat value"
+            VerticalOptions="Center"
+            HorizontalOptions="Center" />
+        <Label
+            Text="Saturated value"
+            VerticalOptions="Center"
+            HorizontalOptions="Center" />
+        <Label
+            Text="Sodium value"
+            VerticalOptions="Center"
+            HorizontalOptions="Center" />
+
+
+
+    </VerticalStackLayout>-->
+
+    <VerticalStackLayout>
+        <Button
+            Text="Add"
+            Clicked="AddFoodToDb" />
+
+        <Label
+            x:Name="labelTitle"
+            Text="Title"
+            FontSize="Large"
+            TextColor="Black"
+            VerticalOptions="Center"
+            HorizontalOptions="Center" />
+
+        <!-- Nutrition label -->
+        <Frame
+            BorderColor="Black"
+            BackgroundColor="White"
+            CornerRadius="5"
+            HasShadow="True"
+            Margin="10"
+            HeightRequest="330"
+            MaximumWidthRequest="300">
+
+            <VerticalStackLayout>
+
+                <Label
+                    Text="Nutrition Facts"
+                    FontSize="Medium"
+                    TextColor="Black" />
+                <Label
+                    FontSize="Small"
+                    TextColor="Black"
+                    Margin="0, 3, 0, 10">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span
+                                Text="Calories: "
+                                FontAttributes="Bold" />
+                            <Span
+                                x:Name="labelCalories" />
+
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <BoxView
+                    BackgroundColor="Black"
+                    HeightRequest="1"
+                    Margin="0,5,0,5" />
+                <Label
+                    TextColor="Black">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span
+                                Text="Total Carbohydrates: "
+                                FontAttributes="Bold" />
+                            <Span
+                                x:Name="labelCarbohydrates" />
+                            <Span
+                                Text="g" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <BoxView
+                    BackgroundColor="Black"
+                    HeightRequest="1"
+                    Margin="0,5,0,5" />
+                <Label
+                    TextColor="Black">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span
+                                Text="Dietary Fiber: "
+                                FontAttributes="Bold" />
+                            <Span
+                                x:Name="labelFibers" />
+                            <Span
+                                Text="g" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <BoxView
+                    BackgroundColor="Black"
+                    HeightRequest="1"
+                    Margin="0,5,0,5" />
+                <Label
+                    TextColor="Black">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span
+                                Text="Total Sugars: "
+                                FontAttributes="Bold" />
+                            <Span
+                                x:Name="labelSugars" />
+                            <Span
+                                Text="g" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <BoxView
+                    BackgroundColor="Black"
+                    HeightRequest="1"
+                    Margin="0,5,0,5" />
+                <Label
+                    TextColor="Black">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span
+                                Text="Proteins: "
+                                FontAttributes="Bold" />
+                            <Span
+                                x:Name="labelProteins" />
+                            <Span
+                                Text="g" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <BoxView
+                    BackgroundColor="Black"
+                    HeightRequest="1"
+                    Margin="0,5,0,5" />
+                <Label
+                    TextColor="Black">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span
+                                Text="Total Fat: "
+                                FontAttributes="Bold" />
+                            <Span
+                                x:Name="labelFat" />
+                            <Span
+                                Text="g" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <BoxView
+                    BackgroundColor="Black"
+                    HeightRequest="1"
+                    Margin="0,5,0,5" />
+                <Label
+                    TextColor="Black">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span
+                                Text="Saturated Fat: "
+                                FontAttributes="Bold" />
+                            <Span
+                                x:Name="labelSaturatedFat" />
+                            <Span
+                                Text="g" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <BoxView
+                    BackgroundColor="Black"
+                    HeightRequest="1"
+                    Margin="0,5,0,5" />
+                <Label
+                    TextColor="Black">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span
+                                Text="Sodium: "
+                                FontAttributes="Bold" />
+                            <Span
+                                x:Name="labelSodium" />
+                            <Span
+                                Text="mg" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <BoxView
+                    BackgroundColor="Black"
+                    HeightRequest="1"
+                    Margin="0,5,0,5" />
+
+            </VerticalStackLayout>
+        </Frame>
     </VerticalStackLayout>
+
+
+
 </ContentPage>
