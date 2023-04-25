@@ -3,14 +3,18 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="MAUI_PROJECT_PDM.Views.ProfilePage"
-    Title="ProfilePage">
+    Title="Profile Page"
+    BackgroundColor="#111">
     <ScrollView>
         <VerticalStackLayout
-            HorizontalOptions="Center">
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="CenterAndExpand">
+            
             <Label
-                Text="Profile"
+                Text="{Binding FirstName, StringFormat='Hello {0}!'}"
                 FontSize="Title"
-                HorizontalOptions="CenterAndExpand" />
+                HorizontalOptions="CenterAndExpand"
+                Margin="0, 0, 0, 20" />
 
             <Image
                 Source="profile_icon.png"

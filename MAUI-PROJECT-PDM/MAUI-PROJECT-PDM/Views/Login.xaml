@@ -10,7 +10,7 @@
         BackgroundColor="#FDF2E9"
         Padding="20"
         WidthRequest="600"
-        HeightRequest="350"
+        HeightRequest="370"
         BorderColor="#fdf2e9"
         CornerRadius="10">
         <FlexLayout
@@ -43,6 +43,12 @@
                 TextColor="Black"
                 BackgroundColor="#FFF" 
                 Completed="login_Completed"/>
+
+            <Button
+                Text="Show Password"
+                TextColor="Black"
+                Clicked="Button_ShowPass_Clicked" />
+
 
             <HorizontalStackLayout
                 HorizontalOptions="CenterAndExpand"

@@ -73,11 +73,11 @@ public partial class Register : ContentPage
 
         if (passwordEntry.IsPassword && confirmPasswordEntry.IsPassword)
         {
-            ((Button)sender).Text = "Show";
+            ((Button)sender).Text = "Show Password";
         }
         else
         {
-            ((Button)sender).Text = "Hide";
+            ((Button)sender).Text = "Hide Password";
         }
     }
 
