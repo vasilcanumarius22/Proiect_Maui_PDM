@@ -7,81 +7,87 @@
     BackgroundColor="#EEE">
 
     <ScrollView>
-    <VerticalStackLayout
-        VerticalOptions="CenterAndExpand"
-        HorizontalOptions="CenterAndExpand"
-        MaximumWidthRequest="300">
-        <Label
-            Text="Contact Us!"
-            FontSize="Header"
+        <VerticalStackLayout
+            VerticalOptions="CenterAndExpand"
             HorizontalOptions="CenterAndExpand"
-            HorizontalTextAlignment="Center"
-            TextColor="#000"
-            Margin="0, 0, 0, 30" />
-
-        <!--Body Section - Actual Contact Form-->
-        <VerticalStackLayout
-            Margin="0, 0, 0, 10">
+            MaximumWidthRequest="300">
             <Label
-                Text="First Name"
-                FontSize="Large"
-                TextColor="#333" />
-            <Entry
-                x:Name="firstNameContact"
-                Placeholder="Enter your First Name"
-                BackgroundColor="#FFF"
-                TextColor="#000" />
-        </VerticalStackLayout>
-
-        <VerticalStackLayout
-            Margin="0, 0, 0, 10">
-            <Label
-                Text="Last Name"
-                FontSize="Large"
-                TextColor="#333" />
-            <Entry
-                x:Name="lastNameContact"
-                Placeholder="Enter your Last Name"
-                BackgroundColor="#FFF"
-                TextColor="#000" />
-        </VerticalStackLayout>
-
-        <VerticalStackLayout
-            Margin="0, 0, 0, 10">
-            <Label
-                Text="Email"
-                FontSize="Large"
-                TextColor="#333" />
-            <Entry
-                x:Name="emailContact"
-                Text="{Binding Email}"
-                IsEnabled="False"
-                TextColor="#999"
-                BackgroundColor="#FFF" />
-        </VerticalStackLayout>
-
-        <VerticalStackLayout
-            Margin="0, 0, 0, 10">
-
-            <Label
-                Text="Message"
-                FontSize="Large"
-                TextColor="#333" />
-            <Editor
-                x:Name="messageContact"
-                Placeholder="Type Your Message"
-                BackgroundColor="#FFF"
+                Text="Contact Us!"
+                FontSize="Header"
+                HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center"
                 TextColor="#000"
-                MaxLength="50"
-                HeightRequest="150" />
+                Margin="0, 0, 0, 30" />
+
+            <!--Body Section - Actual Contact Form-->
+            <VerticalStackLayout
+                Margin="0, 0, 0, 10">
+                <Label
+                    Text="First Name"
+                    FontSize="Large"
+                    TextColor="#333" />
+                <Entry
+                    x:Name="firstNameContact"
+                    Placeholder="Enter your First Name"
+                    BackgroundColor="#FFF"
+                    TextColor="#000" />
+            </VerticalStackLayout>
+
+            <VerticalStackLayout
+                Margin="0, 0, 0, 10">
+                <Label
+                    Text="Last Name"
+                    FontSize="Large"
+                    TextColor="#333" />
+                <Entry
+                    x:Name="lastNameContact"
+                    Placeholder="Enter your Last Name"
+                    BackgroundColor="#FFF"
+                    TextColor="#000" />
+            </VerticalStackLayout>
+
+            <VerticalStackLayout
+                Margin="0, 0, 0, 10">
+                <Label
+                    Text="Email"
+                    FontSize="Large"
+                    TextColor="#333" />
+                <Entry
+                    x:Name="emailContact"
+                    Text="{Binding Email}"
+                    IsEnabled="False"
+                    TextColor="#999"
+                    BackgroundColor="#FFF" />
+            </VerticalStackLayout>
+
+            <VerticalStackLayout
+                Margin="0, 0, 0, 10">
+
+                <Label
+                    Text="Message"
+                    FontSize="Large"
+                    TextColor="#333" />
+                <Editor
+                    x:Name="messageContact"
+                    Placeholder="Type Your Message"
+                    BackgroundColor="#FFF"
+                    TextColor="#000"
+                    MaxLength="50"
+                    HeightRequest="150"
+                    TextChanged="messageContact_TextChanged" />
+                <Label
+                    Text="Max characters reached!"
+                    x:Name="MaxCharsLabel"
+                    IsVisible="False"
+                    TextColor="Red" />
+
+            </VerticalStackLayout>
+
+            <!--Submit Contact form-->
+            <Button
+                Text="Submit!"
+                Clicked="OnSubmitButtonClicked" />
 
         </VerticalStackLayout>
-
-        <!--Submit Contact form-->
-        <Button
-            Text="Submit!"
-            Clicked="OnSubmitButtonClicked" />
-
-    </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
