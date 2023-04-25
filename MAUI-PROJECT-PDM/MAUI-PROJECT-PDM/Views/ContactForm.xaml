@@ -5,6 +5,8 @@
     x:Class="MAUI_PROJECT_PDM.Views.ContactForm"
     Title="Contact"
     BackgroundColor="#EEE">
+
+    <ScrollView>
     <VerticalStackLayout
         VerticalOptions="CenterAndExpand"
         HorizontalOptions="CenterAndExpand"
@@ -81,4 +83,5 @@
             Clicked="OnSubmitButtonClicked" />
 
     </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
