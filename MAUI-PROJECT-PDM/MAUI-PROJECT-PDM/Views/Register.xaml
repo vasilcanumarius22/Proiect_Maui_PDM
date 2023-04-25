@@ -53,7 +53,8 @@
                         TextColor="Black" />
                     <DatePicker
                         x:Name="birthdatePicker"
-                        TextColor="Black" />
+                        TextColor="white"
+                        BackgroundColor="#222" />
                 </StackLayout>
 
                 <Entry

@@ -50,4 +50,17 @@ public partial class Login : ContentPage
     {
         LoginButtonClicked(sender, e);
     }
+
+    private void Button_ShowPass_Clicked(object sender, EventArgs e)
+    {
+        passwordLogIn.IsPassword = !passwordLogIn.IsPassword;
+        if (passwordLogIn.IsPassword)
+        {
+            ((Button)sender).Text = "Show Password";
+        }
+        else
+        {
+            ((Button)sender).Text = "Hide Password";
+        }
+    }
 }

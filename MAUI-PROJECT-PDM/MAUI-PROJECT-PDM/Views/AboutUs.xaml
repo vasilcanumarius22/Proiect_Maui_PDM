@@ -7,64 +7,65 @@
     BackgroundColor="#EEE">
     <ScrollView>
         <VerticalStackLayout
-            MaximumWidthRequest="400">
+            MaximumWidthRequest="400"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="CenterAndExpand">
             <Image
                 MaximumWidthRequest="300"
                 Source="omnifood_logo.png"
                 Margin="0, 20, 0, 20" />
+
             <Label
                 TextColor="Black"
-                FontSize="Body">
+                FontSize="Body"
+                Padding="0, 10, 0, 10">
                 <Label.Text>
-                    At Omnifood, we are a passionate team of food enthusiasts and 
-                    developers dedicated to making healthy eating easy and enjoyable 
-                    for everyone. Our app is designed to help you plan and organize 
-                    your meals based on your dietary preferences, with accurate calorie 
-                    and nutritional information to help you make informed choices about 
-                    what you're eating.
+                    At Omnifood, we are a passionate team of food enthusiasts and developers dedicated to making healthy eating easy and enjoyable for everyone. Our app is designed to help you plan and organize your meals based on your dietary preferences, with accurate calorie and nutritional information to help you make informed choices about what you're eating.
+                </Label.Text>
+            </Label>
+            <Label
+                TextColor="Black"
+                FontSize="Body"
+                Padding="0, 0, 0, 10">
+                <Label.Text>
+                    With our customizable meal plans and recipe collection, you can easily find delicious and healthy meals that fit your lifestyle. Whether you're a vegan, meat-based or fish-based eater, our app offers a wide range of options to choose from.
+                </Label.Text>
+            </Label>
+            <Label
+                TextColor="Black"
+                FontSize="Body"
+                Padding="0, 0, 0, 10">
+                <Label.Text>
+                    At Omnifood, we believe that healthy eating should be easy and accessible to everyone, which is why our app is designed to be user-friendly and intuitive. Our team of experienced developers and nutrition experts are committed to providing you with the best possible user experience and regularly update the app with new features to enhance your experience.
+                </Label.Text>
+            </Label>
+            <Label
+                TextColor="Black"
+                FontSize="Body"
+                Padding="0, 0, 0, 10">
+                <Label.Text>
+                    By using our app, you'll be able to easily track your calorie intake, stay on top of your nutritional goals, and make healthy eating a part of your everyday routine. Join us on our journey to healthy living and let's make nutritious eating easy and enjoyable for everyone!
                 </Label.Text>
             </Label>
             <Label
                 TextColor="Black"
                 FontSize="Body">
                 <Label.Text>
-                    With our customizable meal plans and recipe collection, you can easily 
-                    find delicious and healthy meals that fit your lifestyle. Whether you're a 
-                    vegan, meat-based or fish-based eater, our app offers a wide range of options 
-                    to choose from.
+                    Our team is based in the heart of Bucharest, at Strada General Berthelot, Nr. 9, Sector 1, Romania. We are proud to serve customers around the world who are committed to making healthy eating a part of their lifestyle. Join us on our journey to healthy living and let's make nutritious eating easy and enjoyable for everyone!
                 </Label.Text>
             </Label>
+
             <Label
                 TextColor="Black"
-                FontSize="Body">
+                FontSize="Body"
+                HorizontalTextAlignment="Center"
+                Margin="0, 100, 0, 0">
                 <Label.Text>
-                    At Omnifood, we believe that healthy eating should be easy and accessible 
-                    to everyone, which is why our app is designed to be user-friendly and intuitive. 
-                    Our team of experienced developers and nutrition experts are committed to providing 
-                    you with the best possible user experience and regularly update the app with new 
-                    features to enhance your experience.
+                    Copyright @Omnifood app
                 </Label.Text>
             </Label>
-            <Label
-                TextColor="Black"
-                FontSize="Body">
-                <Label.Text>
-                    By using our app, you'll be able to easily track your calorie intake, stay on top 
-                    of your nutritional goals, and make healthy eating a part of your everyday routine. 
-                    Join us on our journey to healthy living and let's make nutritious eating easy and 
-                    enjoyable for everyone!
-                </Label.Text>
-            </Label>
-            <Label
-                TextColor="Black"
-                FontSize="Body">
-                <Label.Text>
-                    Our team is based in the heart of Bucharest, at Strada General Berthelot, Nr. 9, 
-                    Sector 1, Romania. We are proud to serve customers around the world who are committed 
-                    to making healthy eating a part of their lifestyle. Join us on our journey to healthy 
-                    living and let's make nutritious eating easy and enjoyable for everyone!
-                </Label.Text>
-            </Label>
+
+
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

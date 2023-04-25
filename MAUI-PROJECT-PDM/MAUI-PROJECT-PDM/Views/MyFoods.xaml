@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="MAUI_PROJECT_PDM.Views.MyFoods"
     BackgroundColor="#EEE"
-    Title="MyFoods">
+    Title="My Foods">
 
     <ScrollView>
 
@@ -12,19 +12,24 @@
         <VerticalStackLayout
             HorizontalOptions="Center">
 
-            <HorizontalStackLayout
+            <VerticalStackLayout
                 Padding="2"
                 HorizontalOptions="CenterAndExpand">
                 <DatePicker
                     DateSelected="DatePicker_Food_DateSelected"
-                    x:Name="DatePicker_Food" />
+                    x:Name="DatePicker_Food" 
+                    TextColor="white"
+                    BackgroundColor="#222"
+                    HorizontalOptions="Center"/>
 
                 <Label
                     x:Name="label_total_calories"
                     Text="0"
-                    Margin="10" />
+                    Margin="10"
+                    TextColor="Black"
+                    HorizontalTextAlignment="Center"/>
 
-            </HorizontalStackLayout>
+            </VerticalStackLayout>
 
             <ListView
                 x:Name="listViewMyFoods"

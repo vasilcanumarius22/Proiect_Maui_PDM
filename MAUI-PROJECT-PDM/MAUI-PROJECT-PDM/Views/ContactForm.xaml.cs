@@ -56,6 +56,8 @@ public partial class ContactForm : ContentPage
         {
             // Connects to the SMTP server, authenticates, sends the email, and disconnects.
             await client.ConnectAsync("smtp.gmail.com", 587, MailKit.Security.SecureSocketOptions.StartTls);
+            // User is the gmail account and the password is in fact Application Password provided by Google Workspace
+            // for this case of app accessing an account without the real password
             await client.AuthenticateAsync("marvdan753@gmail.com", "rzpcvukfskevaogh");
             await client.SendAsync(message);
             await client.DisconnectAsync(true);
