@@ -71,6 +71,21 @@ public partial class ContactForm : ContentPage
 
         
     }
+
+    private void messageContact_TextChanged(object sender, TextChangedEventArgs e)
+    {
+        Editor editor = sender as Editor;
+        Label maxCharsLabel = this.FindByName<Label>("MaxCharsLabel");
+
+        if (editor.Text.Length >= editor.MaxLength && maxCharsLabel != null)
+        {
+            maxCharsLabel.IsVisible = true;
+        }
+        else if (maxCharsLabel != null)
+        {
+            maxCharsLabel.IsVisible = false;
+        }
+    }
 }
 
 // Contact class -> represents a submitted contact message, with properties for first name, last name, email, and message.
