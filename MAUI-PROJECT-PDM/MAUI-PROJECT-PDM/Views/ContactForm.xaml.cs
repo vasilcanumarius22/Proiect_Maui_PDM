@@ -5,7 +5,7 @@ using MailKit.Net.Smtp;
 using MimeKit;
 using Microsoft.Maui.Controls;
 
-// ContactForm class ->  represents a form for submitting contact messages.
+// Definition of the ContactForm class as a partial class that inherits from ContentPage
 public partial class ContactForm : ContentPage
 {
     // private User object -> represents the user submitting the contact message.
