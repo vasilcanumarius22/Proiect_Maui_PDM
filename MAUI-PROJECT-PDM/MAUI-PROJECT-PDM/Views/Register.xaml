@@ -5,14 +5,15 @@
     x:Class="MAUI_PROJECT_PDM.Views.Register"
     BackgroundColor="#EEE"
     Title="Register">
-    <Frame
+    <ScrollView>
+        <Frame
         BackgroundColor="#FDF2E9"
         Padding="20"
         WidthRequest="600"
         HeightRequest="700"
         BorderColor="#fdf2e9"
         CornerRadius="10">
-        <ScrollView>
+
             <VerticalStackLayout
                 HorizontalOptions="Center"
                 WidthRequest="350">
@@ -87,8 +88,8 @@
                     FontSize="20"
                     BackgroundColor="#E67E22" />
             </VerticalStackLayout>
-        </ScrollView>
-    </Frame>
 
+        </Frame>
+    </ScrollView>
 
 </ContentPage>
