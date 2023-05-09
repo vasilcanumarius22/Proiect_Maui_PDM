@@ -14,6 +14,3 @@ __Omnifood - Your AI Chef__
 - PĂDUCEL Alexandru Gabriel
 - OANĂ Andreea Ramona
 - STAN Adrian Gabriel
-
-
-
